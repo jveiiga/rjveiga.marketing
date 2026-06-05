@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RJVEIGA MKT STUDIO - Marketing Político",
     description: "Estratégia digital que transforma candidatos em eleitos.",
-    url: "https://seusite.com.br",
+    url: "https://rjveiga.marketing",
     siteName: "RJVEIGA MKT STUDIO",
     locale: "pt_BR",
     type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       name: "RJVEIGA MKT STUDIO - Marketing Político",
       telephone: "+5511915181487",
       email: "rjveiga.marketing@gmail.com",
-      url: "https://seusite.com.br",
+      url: "https://rjveiga.marketing",
       areaServed: "BR",
     }),
   }}

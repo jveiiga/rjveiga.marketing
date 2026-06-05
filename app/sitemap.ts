@@ -2,7 +2,7 @@
 export default function sitemap() {
     return [
       {
-        url: "https://seusite.com.br",
+        url: "https://rjveiga.marketing",
         lastModified: new Date(),
       },
     ];

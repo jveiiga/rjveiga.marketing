@@ -2,6 +2,6 @@
 export default function robots() {
     return {
       rules: { userAgent: "*", allow: "/" },
-      sitemap: "https://seusite.com.br/sitemap.xml",
+      sitemap: "https://rjveiga.marketing/sitemap.xml",
     };
   }
