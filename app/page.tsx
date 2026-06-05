@@ -87,6 +87,12 @@ export default function Home() {
       transition: { duration: 2.0 },
     },
   };
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const items = [
     {
       title: "Posicionamento",
@@ -276,7 +282,10 @@ export default function Home() {
       </section>
 
       <hr className="border-gray-100my-6 mx-[5%]" />
-      <section ref={ref} className="bg-black text-white px-6 py-45 overflow-hidden">
+      <section
+        ref={ref}
+        className="bg-black text-white px-6 py-45 overflow-hidden"
+      >
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-500 uppercase tracking-widest text-2xl mb-10">
             onde você vai chegar
@@ -400,7 +409,9 @@ export default function Home() {
             {items.map((item, i) => (
               <motion.li
                 key={i}
-                variants={item}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
                 onClick={() => setActive(active === i ? null : i)}
                 className="border-b pb-2 cursor-pointer text-right"
               >
@@ -494,45 +505,43 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-black px-6 text-sm border-t">
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 text-center md:text-left justify-around">
-    
-    {/* BLOCO 1 */}
-    <div className="py-16 max-w-md">
-      <p className="text-3xl font-bold">
-        Nós vamos de candidatos a eleitos, <br />
-        e de eleitos aos que querem se reeleger.
-      </p>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 text-center md:text-left justify-around">
+          {/* BLOCO 1 */}
+          <div className="py-16 max-w-md">
+            <p className="text-3xl font-bold">
+              Nós vamos de candidatos a eleitos, <br />e de eleitos aos que
+              querem se reeleger.
+            </p>
 
-      <p className="text-lg text-gray-500 mt-4">
-        Combinamos o que elegeu cada um deles para que a próxima vez seja
-        a sua.
-      </p>
+            <p className="text-lg text-gray-500 mt-4">
+              Combinamos o que elegeu cada um deles para que a próxima vez seja
+              a sua.
+            </p>
 
-      <div className="text-gray-400 mt-6">
-        <p>© 2025</p>
-        <p>Todos os direitos reservados</p>
-      </div>
-    </div>
+            <div className="text-gray-400 mt-6">
+              <p>© 2025</p>
+              <p>Todos os direitos reservados</p>
+            </div>
+          </div>
 
-    {/* BLOCO 2 */}
-    <div className="py-16">
-      <h4 className="text-3xl font-bold mb-2">Contato</h4>
-      <p className="text-lg text-gray-500">contato@email.com</p>
-      <p className="text-lg text-gray-500">(11) 99999-9999</p>
-    </div>
+          {/* BLOCO 2 */}
+          <div className="py-16">
+            <h4 className="text-3xl font-bold mb-2">Contato</h4>
+            <p className="text-lg text-gray-500">contato@email.com</p>
+            <p className="text-lg text-gray-500">(11) 99999-9999</p>
+          </div>
 
-    {/* BLOCO 3 */}
-    <div className="py-16">
-      <h4 className="text-3xl font-bold mb-2">Social</h4>
-      <div className="text-lg text-gray-400 flex flex-col underline gap-4">
-        <a href="#">WhatsApp</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-      </div>
-    </div>
-
-  </div>
-</footer>
+          {/* BLOCO 3 */}
+          <div className="py-16">
+            <h4 className="text-3xl font-bold mb-2">Social</h4>
+            <div className="text-lg text-gray-400 flex flex-col underline gap-4">
+              <a href="#">WhatsApp</a>
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </footer>
       <a
         href="https://wa.me/SEUNUMERO"
         target="_blank"
