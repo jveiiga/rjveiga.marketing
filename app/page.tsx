@@ -230,7 +230,7 @@ export default function Home() {
 
           <motion.p
             variants={item}
-            className="text-xl text-gray-400 max-w-xl leading-relaxed"
+            className="text-xl text-gray-400 leading-relaxed w-full md:w-3xl"
           >
             Improvisar conteúdo na reta final é o caminho mais caro para perder
             uma eleição. Investir na base tarde demais, pulverizar orçamento
@@ -259,7 +259,7 @@ export default function Home() {
       {/* Conteúdo */}
       <section ref={textRef} className="overflow-hidden">
         <div className="flex justify-center items-center py-24 px-6 overflow-hidden">
-          <h2 className="text-4xl sm:text-5xl md:text-9xl font-bold leading-tight text-center">
+          <h2 className="text-4xl sm:text-5xl lg:md:text-8xl xl:text-9xl font-bold leading-tight text-center">
             <motion.span className="block leading-[1.2] md:leading-tight">
               <motion.span
                 style={{ y: textY, opacity: textOpacity }}
@@ -333,7 +333,7 @@ export default function Home() {
 
           <motion.div
             variants={item}
-            className="text-lg text-gray-400 max-w-xl leading-relaxed"
+            className="text-lg text-gray-400 max-w-xl leading-relaxed md:w-2xl"
           >
             <p className="mb-3">
               Eles aparecem na campanha. Nós aparecemos sempre.
@@ -362,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* EXPLICAÇÃO */}
-      <section className="bg-white px-6 py-16 text-center md:text-right overflow-hidden">
+      <section className="bg-white px-6 py-16 text-center md:text-right md:px-[15%] overflow-hidden">
         <motion.div
           variants={container}
           initial="hidden"
@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* FAZEMOS */}
-      <section className="bg-white text-black px-6 pb-16 overflow-hidden">
+      <section className="bg-white text-black px-6 pb-16 md:px-[15%] overflow-hidden">
         <motion.div
           className="max-w-5xl mx-auto px-2 md:px-0"
           variants={container}
