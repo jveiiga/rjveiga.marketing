@@ -1,7 +1,9 @@
-// app/robots.ts
-export default function robots() {
-    return {
-      rules: { userAgent: "*", allow: "/" },
-      sitemap: "https://seusite.com.br/sitemap.xml",
-    };
+// app/sitemap.ts
+export default function sitemap() {
+    return [
+      {
+        url: "https://seusite.com.br",
+        lastModified: new Date(),
+      },
+    ];
   }
