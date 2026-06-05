@@ -22,15 +22,15 @@ export default function Home() {
   // const videos = ["v1.mp4", "v2.mp4", "v3.mp4", "v4.mp4", "v5.mp4"];
 
   // troca automática
-  useEffect(() => {
-    if (!videoRef.current) return;
+    // useEffect(() => {
+    //   if (!videoRef.current) return;
 
-    if (playing) {
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
-  }, [playing]);
+    //   if (playing) {
+    //     videoRef.current.play();
+    //   } else {
+    //     videoRef.current.pause();
+    //   }
+    // }, [playing]);
 
   // controla play/pause ao trocar
   useEffect(() => {
@@ -215,14 +215,14 @@ export default function Home() {
         >
           <motion.p
             variants={item}
-            className="text-3xl text-gray-400 py-6 max-w-xl leading-relaxed"
+            className=" text-3xl text-gray-400 py-6 max-w-xl leading-relaxed uppercase"
           >
             Obstáculo
           </motion.p>
 
           <motion.h3
             variants={item}
-            className="text-3xl text-black md:text-5xl font-bold mb-6"
+            className="text-3xl text-black md:text-3xl lg:text-4xl font-bold mb-6 uppercase"
           >
             Base não se compra na véspera. <br />
             Se cultiva.
@@ -230,7 +230,7 @@ export default function Home() {
 
           <motion.p
             variants={item}
-            className="text-xl text-gray-400 leading-relaxed w-full md:w-3xl"
+            className="font-open-sans text-xl text-gray-400 leading-relaxed w-full md:w-3xl"
           >
             Improvisar conteúdo na reta final é o caminho mais caro para perder
             uma eleição. Investir na base tarde demais, pulverizar orçamento
@@ -259,11 +259,11 @@ export default function Home() {
       {/* Conteúdo */}
       <section ref={textRef} className="overflow-hidden">
         <div className="flex justify-center items-center py-24 px-6 overflow-hidden">
-          <h2 className="text-4xl sm:text-5xl lg:md:text-8xl xl:text-9xl font-bold leading-tight text-center">
+          <h2 className="font-poppins text-4xl sm:text-5xl lg:md:text-8xl xl:text-9xl font-bold leading-tight text-center">
             <motion.span className="block leading-[1.2] md:leading-tight">
               <motion.span
                 style={{ y: textY, opacity: textOpacity }}
-                className="block block will-change-transform"
+                className="block block will-change-transform "
               >
                 tudo o que é necessário
               </motion.span>
@@ -294,7 +294,7 @@ export default function Home() {
           <div className="grid md:grid-cols-5 gap-8">
             {stats.map((item, i) => (
               <div key={i}>
-                <h3 className="text-4xl md:text-6xl font-light">
+                <h3 className="font-poppins text-4xl md:text-6xl font-light">
                   {inView ? (
                     <CountUp
                       start={0}
@@ -326,14 +326,14 @@ export default function Home() {
         >
           <motion.h3
             variants={item}
-            className="text-5xl text-black md:text-8xl font-bold mb-6"
+            className="font-poppins text-5xl text-black md:text-8xl font-bold mb-6"
           >
             soluções <br /> estratégicas
           </motion.h3>
 
           <motion.div
             variants={item}
-            className="text-lg text-gray-400 max-w-xl leading-relaxed md:w-2xl"
+            className="font-open-sans text-lg text-gray-400 max-w-xl leading-relaxed md:w-2xl"
           >
             <p className="mb-3">
               Eles aparecem na campanha. Nós aparecemos sempre.
@@ -381,7 +381,7 @@ export default function Home() {
 
             <motion.p
               variants={item}
-              className="text-xl text-gray-400 max-w-full leading-relaxed"
+              className="font-open-sans text-xl text-gray-400 max-w-full leading-relaxed"
             >
               v. exibir-se, mostrar-se.
             </motion.p>
@@ -497,7 +497,7 @@ export default function Home() {
               <h4 className="font-bold uppercase mb-2 text-2xl">
                 {step.title}
               </h4>
-              <p className="text-gray-400 text-sm">{step.desc}</p>
+              <p className="font-poppins text-gray-400 text-sm">{step.desc}</p>
             </div>
           </motion.div>
         ))}

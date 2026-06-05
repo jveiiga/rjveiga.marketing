@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Montserrat, Poppins, Open_Sans } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const roboto = Roboto({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-roboto',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans',
 });
 
 export const metadata: Metadata = {
@@ -23,11 +35,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col overflow-x-hidden">{children}</body>
+<html lang="pt-BR">
+      <body className={`${roboto.variable} ${montserrat.variable} ${poppins.variable} ${openSans.variable} font-montserrat antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
