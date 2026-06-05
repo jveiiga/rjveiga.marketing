@@ -259,7 +259,7 @@ export default function Home() {
       {/* Conteúdo */}
       <section ref={textRef} className="overflow-hidden">
         <div className="flex justify-center items-center py-24 px-6 overflow-hidden">
-          <h2 className="font-poppins text-4xl sm:text-5xl lg:md:text-8xl xl:text-9xl font-bold leading-tight text-center">
+          <h2 className="font-poppins text-5xl sm:text-5xl lg:md:text-8xl xl:text-9xl font-bold leading-tight text-center">
             <motion.span className="block leading-[1.2] md:leading-tight">
               <motion.span
                 style={{ y: textY, opacity: textOpacity }}
@@ -362,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* EXPLICAÇÃO */}
-      <section className="bg-white px-6 py-16 text-center md:text-right md:px-[15%] overflow-hidden">
+      <section className="bg-white px-6 py-16 text-right md:px-[15%] overflow-hidden">
         <motion.div
           variants={container}
           initial="hidden"
@@ -371,7 +371,7 @@ export default function Home() {
         >
           <motion.hr variants={item} className="border-gray-300 mx-[5%]" />
 
-          <div className="max-w-5xl mx-auto px-2 md:px-0 pt-30">
+          <div className="max-w-5xl px-2 md:px-0 pt-30">
             <motion.h3
               variants={item}
               className="text-3xl text-black md:text-5xl font-bold mb-6"
