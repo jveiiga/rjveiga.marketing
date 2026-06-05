@@ -189,7 +189,7 @@ export default function Home() {
           <source src="/v1.mp4" type="video/mp4" />
         </motion.video>
 
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/20" />
 
         <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 text-sm z-50">
           <Image src="/logo.png" alt="Logo" width={300} height={300} />
