@@ -22,15 +22,15 @@ export default function Home() {
   // const videos = ["v1.mp4", "v2.mp4", "v3.mp4", "v4.mp4", "v5.mp4"];
 
   // troca automática
-    // useEffect(() => {
-    //   if (!videoRef.current) return;
+  // useEffect(() => {
+  //   if (!videoRef.current) return;
 
-    //   if (playing) {
-    //     videoRef.current.play();
-    //   } else {
-    //     videoRef.current.pause();
-    //   }
-    // }, [playing]);
+  //   if (playing) {
+  //     videoRef.current.play();
+  //   } else {
+  //     videoRef.current.pause();
+  //   }
+  // }, [playing]);
 
   // controla play/pause ao trocar
   useEffect(() => {
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       <a
-        href="https://wa.me/SEUNUMEROAQUI"
+        href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex fixed bottom-6 right-6 bg-green-500 text-3xl text-white p-5 rounded-full shadow-lg z-50 hover:scale-110 transition"
@@ -246,13 +246,16 @@ export default function Home() {
             Quem começa antes, tem mais chances de garantir o resultado.
           </motion.p>
 
-          <motion.button
+          <motion.a
+            href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank"
+            rel="noopener noreferrer"
             variants={item}
-            className="mt-6 border px-4 py-3 bg-[#cb342b] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer"
+            className="mt-6 px-5 py-5 border md:px-4 md:py-3 bg-[#cb342b] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer inline-block"
           >
             <span className="relative z-10">agende uma reunião</span>
             <span className="absolute top-0 right-0 w-0 h-full bg-[#0156b3] transition-all duration-500 group-hover:w-full"></span>
-          </motion.button>
+          </motion.a>
         </motion.div>
       </section>
 
@@ -350,14 +353,16 @@ export default function Home() {
               real do eleitor.
             </p>
           </motion.div>
-
-          <motion.button
+          <motion.a
+            href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank"
+            rel="noopener noreferrer"
             variants={item}
-            className="mt-6 border px-4 py-3 bg-[#0156b3] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer"
+            className="mt-6 border px-5 py-5 border md:px-4 md:py-3  bg-[#0156b3] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer inline-block"
           >
             <span className="relative z-10">agende uma reunião</span>
             <span className="absolute top-0 right-0 w-0 h-full bg-[#cb342b] transition-all duration-500 group-hover:w-full"></span>
-          </motion.button>
+          </motion.a>
         </motion.div>
       </section>
 
@@ -444,13 +449,16 @@ export default function Home() {
             ))}
           </ul>
 
-          <motion.button
+          <motion.a
+            href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank"
+            rel="noopener noreferrer"
             variants={item}
-            className="mt-6 border px-4 py-3 bg-[#cb342b] rounded-lg text-white text-sm uppercase relative overflow-hidden group cursor-pointer"
+            className="text-white mt-6 border px-5 py-5 border md:px-4 md:py-3  bg-[#cb342b] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer inline-block"
           >
             <span className="relative z-10">agende uma reunião</span>
             <span className="absolute top-0 right-0 w-0 h-full bg-[#0156b3] transition-all duration-500 group-hover:w-full"></span>
-          </motion.button>
+          </motion.a>
         </motion.div>
       </section>
 
@@ -527,23 +535,23 @@ export default function Home() {
           {/* BLOCO 2 */}
           <div className="py-16">
             <h4 className="text-3xl font-bold mb-2">Contato</h4>
-            <p className="text-lg text-gray-500">contato@email.com</p>
-            <p className="text-lg text-gray-500">(11) 99999-9999</p>
+            <p className="text-lg text-gray-500">rjveiga.marketing@gmail.com</p>
+            <p className="text-lg text-gray-500">(11) 91518-1487</p>
           </div>
 
           {/* BLOCO 3 */}
           <div className="py-16">
             <h4 className="text-3xl font-bold mb-2">Social</h4>
             <div className="text-lg text-gray-400 flex flex-col underline gap-4">
-              <a href="#">WhatsApp</a>
-              <a href="#">Instagram</a>
-              <a href="#">LinkedIn</a>
+              <a className="cursor-pointer" target="_blank" rel="noopener noreferrer "href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">WhatsApp</a>
+              <a className="cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rjveiga.marketing/">Instagram</a>
+              <a className="cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rjveiga/">LinkedIn</a>
             </div>
           </div>
         </div>
       </footer>
       <a
-        href="https://wa.me/SEUNUMERO"
+        href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-0 left-0 w-full bg-[#25D366] flex items-center justify-center py-4 z-50 md:hidden"
