@@ -14,6 +14,7 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [active, setActive] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement | null>(null);
+  const [hideArrow, setHideArrow] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -92,6 +93,19 @@ export default function Home() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHideArrow(true);
+      } else {
+        setHideArrow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const items = [
     {
@@ -195,7 +209,11 @@ export default function Home() {
           <Image src="/logo.png" alt="Logo" width={300} height={300} />
         </header>
         {/* Indicador de scroll */}
-        <div className="absolute bottom-50 md:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white">
+        <div
+          className={`absolute bottom-50 md:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white transition-opacity duration-300 ${
+            hideArrow ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
           <FaChevronDown className="text-4xl animate-bounce" />
         </div>
       </section>
