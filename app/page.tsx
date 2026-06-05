@@ -206,11 +206,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20" />
 
         <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 text-sm z-50">
-          <Image src="/logo.png" alt="Logo" width={300} height={300} />
+          <Image src="/logo.png" alt="RJVEIGA MKT STUDIO — Marketing Político Digital para Candidatos" width={300} height={300} />
         </header>
+        <h1 className="sr-only">
+          RJ VEIGA MKT STUDIO — Marketing Político Digital para Candidatos
+        </h1>
         {/* Indicador de scroll */}
         <div
-          className={`absolute bottom-50 md:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white transition-opacity duration-300 ${
+          className={`absolute bottom-50 lg:bottom-20 xl:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white transition-opacity duration-300 ${
             hideArrow ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
@@ -272,6 +275,7 @@ export default function Home() {
             href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Agende uma reunião sobre posicionamento político"
             variants={item}
             className="mt-6 px-5 py-5 border md:px-4 md:py-3 bg-[#cb342b] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer inline-block"
           >
@@ -379,6 +383,7 @@ export default function Home() {
             href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Agende uma reunião sobre posicionamento político"
             variants={item}
             className="mt-6 border px-5 py-5 border md:px-4 md:py-3  bg-[#0156b3] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer inline-block"
           >
@@ -475,6 +480,7 @@ export default function Home() {
             href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Agende uma reunião sobre posicionamento político"
             variants={item}
             className="text-white mt-6 border px-5 py-5 border md:px-4 md:py-3  bg-[#cb342b] rounded-lg text-sm uppercase relative overflow-hidden group cursor-pointer inline-block"
           >
