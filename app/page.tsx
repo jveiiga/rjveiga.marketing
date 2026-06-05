@@ -194,6 +194,10 @@ export default function Home() {
         <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 text-sm z-50">
           <Image src="/logo.png" alt="Logo" width={300} height={300} />
         </header>
+        {/* Indicador de scroll */}
+        <div className="absolute bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white">
+          <FaChevronDown className="text-4xl animate-bounce" />
+        </div>
       </section>
 
       <a
@@ -543,9 +547,30 @@ export default function Home() {
           <div className="py-16">
             <h4 className="text-3xl font-bold mb-2">Social</h4>
             <div className="text-lg text-gray-400 flex flex-col underline gap-4">
-              <a className="cursor-pointer" target="_blank" rel="noopener noreferrer "href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">WhatsApp</a>
-              <a className="cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rjveiga.marketing/">Instagram</a>
-              <a className="cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rjveiga/">LinkedIn</a>
+              <a
+                className="cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer "
+                href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+              >
+                WhatsApp
+              </a>
+              <a
+                className="cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/rjveiga.marketing/"
+              >
+                Instagram
+              </a>
+              <a
+                className="cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/rjveiga/"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
