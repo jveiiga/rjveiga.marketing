@@ -385,7 +385,7 @@ export default function Home() {
             </p>
           </motion.div>
           <motion.a
-            href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Agende uma reunião sobre posicionamento político"
@@ -623,7 +623,7 @@ export default function Home() {
         </div>
       </footer>
       <a
-        href="https://wa.me/55119151881487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+        href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-0 left-0 w-full bg-[#25D366] flex items-center justify-center py-4 z-50 md:hidden"
