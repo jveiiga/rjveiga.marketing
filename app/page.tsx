@@ -206,7 +206,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20" />
 
         <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 text-sm z-50">
-          <Image src="/logo.png" alt="RJVEIGA MKT STUDIO — Marketing Político Digital para Candidatos" width={300} height={300} />
+          <Image
+            src="/logo.png"
+            alt="RJVEIGA MKT STUDIO — Marketing Político Digital para Candidatos"
+            width={300}
+            height={300}
+          />
         </header>
         <h1 className="sr-only">
           RJ VEIGA MKT STUDIO — Marketing Político Digital para Candidatos
@@ -511,33 +516,51 @@ export default function Home() {
       </section> */}
 
       {/* PROCESSO */}
-      <motion.div
-        className="flex flex-col gap-16 py-40 px-6 md:px-30"
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {steps.map((step, i) => (
-          <motion.div
-            key={i}
-            custom={i}
-            variants={itemAlt}
-            className={`flex flex-col items-center md:items-start md:flex-row ${
-              i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } gap-6`}
+      <section>
+        <motion.div
+          className="py-20 px-6 md:py-30 md:px-[15%]"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.h3
+            className="font-poppins text-5xl sm:text-6xl md:text-8xl text-white font-bold break-words"
+            variants={item}
           >
-            <div className="text-4xl font-bold">{i + 1}.</div>
+            criação <br /> eleitoral
+          </motion.h3>
+        </motion.div>
 
-            <div>
-              <h4 className="font-bold uppercase mb-2 text-2xl">
-                {step.title}
-              </h4>
-              <p className="font-poppins text-gray-400 text-sm">{step.desc}</p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+        <motion.div
+          className="flex flex-col gap-16 pb-40 px-6 md:px-30"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              variants={itemAlt}
+              className={`flex flex-col items-center md:items-start md:flex-row ${
+                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-6`}
+            >
+              <div className="text-4xl font-bold">{i + 1}.</div>
+              <div>
+                <h4 className="font-bold uppercase mb-2 text-2xl">
+                  {step.title}
+                </h4>
+                <p className="font-poppins text-gray-400 text-sm">
+                  {step.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
 
       {/* FOOTER */}
       <footer className="bg-black px-6 text-sm border-t">
