@@ -195,7 +195,7 @@ export default function Home() {
           <Image src="/logo.png" alt="Logo" width={300} height={300} />
         </header>
         {/* Indicador de scroll */}
-        <div className="absolute bottom-40 md:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white">
+        <div className="absolute bottom-50 md:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white">
           <FaChevronDown className="text-4xl animate-bounce" />
         </div>
       </section>
