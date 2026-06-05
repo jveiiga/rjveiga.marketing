@@ -25,19 +25,41 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "RJVEIGA MKT STUDIO - Marketing Político | Estratégia Digital para Candidatos",
+  title:
+    "RJVEIGA MKT STUDIO - Marketing Político | Estratégia Digital para Candidatos",
   description:
     "Construímos presença digital para candidatos antes da campanha começar. Posicionamento, tráfego e conteúdo político estratégico.",
   keywords: [
+    // Intenção principal
     "marketing político",
-    "campanha eleitoral digital",
-    "assessoria política",
-    "tráfego para candidatos",
+    "agência de marketing político",
+    "produtora para candidatos",
+    "produtora política",
+
+    // Serviços específicos
+    "assessoria de comunicação política",
+    "consultoria eleitoral digital",
+    "gestão de redes sociais para candidatos",
+    "tráfego pago para campanha eleitoral",
+    "conteúdo político para redes sociais",
+    "estratégia digital para vereador",
+    "estratégia digital para deputado",
+
+    // Termos de descoberta
+    "agência eleitoral",
+    "marketing para campanha política",
+    "como fazer campanha no Instagram",
+    "produtora audiovisual política",
   ],
   authors: [{ name: "RJVEIGA MKT STUDIO" }],
   openGraph: {
-    title: "RJVEIGA MKT STUDIO - Marketing Político",
-    description: "Estratégia digital que transforma candidatos em eleitos.",
+    title: {
+      default:
+        "RJVEIGA MKT STUDIO | Agência de Marketing Político e Produtora para Candidatos",
+      template: "%s | RJVEIGA MKT STUDIO",
+    },
+    description:
+      "Agência de marketing político e produtora audiovisual para candidatos. Estratégia digital, tráfego eleitoral e conteúdo para vereadores, deputados e prefeitos. São Paulo e todo o Brasil.",
     url: "https://rjveiga.marketing",
     siteName: "RJVEIGA MKT STUDIO",
     locale: "pt_BR",
@@ -46,26 +68,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RJVEIGA MKT STUDIO - Marketing Político",
-    description: "Estratégia digital para candidatos.",
+    title: {
+      default:
+        "RJVEIGA MKT STUDIO | Agência de Marketing Político e Produtora para Candidatos",
+      template: "%s | RJVEIGA MKT STUDIO",
+    },
+    description:
+      "Agência de marketing político e produtora audiovisual para candidatos. Estratégia digital, tráfego eleitoral e conteúdo para vereadores, deputados e prefeitos. São Paulo e todo o Brasil.",
     images: ["/og-image.jpg"],
   },
 };
-
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      name: "RJVEIGA MKT STUDIO - Marketing Político",
-      telephone: "+5511915181487",
-      email: "rjveiga.marketing@gmail.com",
-      url: "https://rjveiga.marketing",
-      areaServed: "BR",
-    }),
-  }}
-/>
 
 export default function RootLayout({
   children,
@@ -77,6 +89,71 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${montserrat.variable} ${poppins.variable} ${openSans.variable} font-montserrat antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MarketingAgency",
+              name: "RJVEIGA MKT STUDIO",
+              description:
+                "Agência especializada em marketing político e produção audiovisual para candidatos e campanhas eleitorais.",
+              url: "https://rjveiga.marketing",
+              telephone: "+5511915181487",
+              email: "rjveiga.marketing@gmail.com",
+              areaServed: {
+                "@type": "Country",
+                name: "Brasil",
+              },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Serviços de Marketing Político",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Assessoria de Comunicação Política",
+                      description:
+                        "Estratégia de posicionamento, narrativa e presença digital para candidatos.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Produção Audiovisual para Campanhas",
+                      description:
+                        "Produção e edição de vídeos institucionais e conteúdo para redes sociais políticas.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Gestão de Tráfego Eleitoral",
+                      description:
+                        "Campanhas de tráfego pago segmentadas para eleitores indecisos.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Gestão de Redes Sociais Políticas",
+                      description:
+                        "Criação e gestão de conteúdo orgânico para Instagram, YouTube e outras plataformas.",
+                    },
+                  },
+                ],
+              },
+              sameAs: [
+                "https://www.instagram.com/rjveiga.marketing/",
+                "https://www.linkedin.com/in/rjveiga/",
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>
