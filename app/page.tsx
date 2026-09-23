@@ -186,26 +186,27 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-full text-white bg-black pb-20 md:pb-0 overflow-x-hidden">
+    <main className="w-full pb-20 overflow-x-hidden text-white bg-black md:pb-0">
       {/* HERO */}
       <section
         ref={sectionRef}
         className="relative h-[110vh] w-full overflow-hidden"
       >
         <motion.video
+          poster="/hero-poster.jpg"
           style={{ scale }}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="object-cover w-full h-full"
         >
           <source src="/v1.mp4" type="video/mp4" />
         </motion.video>
 
         <div className="absolute inset-0 bg-black/20" />
 
-        <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 text-sm z-50">
+        <header className="absolute top-0 left-0 z-50 flex items-center justify-between w-full p-4 text-sm">
           <Image
             src="/logo.png"
             alt="RJVEIGA MKT STUDIO — Marketing Político Digital para Candidatos"
@@ -218,7 +219,12 @@ export default function Home() {
         </h1>
         {/* Indicador de scroll */}
         <div
-          className={`absolute bottom-50 lg:bottom-20 xl:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white transition-opacity duration-300 ${
+          onClick={() => {
+            document.getElementById("about")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className={`absolute bottom-50 lg:bottom-20 xl:bottom-30 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-white transition-opacity duration-300 cursor-pointer ${
             hideArrow ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
@@ -230,12 +236,15 @@ export default function Home() {
         href="https://wa.me/5511915181487?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex fixed bottom-6 right-6 bg-green-500 text-3xl text-white p-5 rounded-full shadow-lg z-50 hover:scale-110 transition"
+        className="fixed z-50 hidden p-5 text-3xl text-white transition bg-green-500 rounded-full shadow-lg md:flex bottom-6 right-6 hover:scale-110"
       >
         <FaWhatsapp size={64} />
       </a>
       {/* PROBLEMA */}
-      <section className="bg-white px-6 md:pl-[15%] py-16 overflow-hidden">
+      <section
+        className="bg-white px-6 md:pl-[15%] py-16 overflow-hidden"
+        id="about"
+      >
         <motion.div
           className="mx-auto"
           variants={container}
@@ -245,14 +254,14 @@ export default function Home() {
         >
           <motion.p
             variants={item}
-            className=" text-3xl text-gray-400 py-6 max-w-xl leading-relaxed uppercase"
+            className="max-w-xl py-6 text-3xl leading-relaxed text-gray-400 uppercase "
           >
             Obstáculo
           </motion.p>
 
           <motion.h3
             variants={item}
-            className="text-3xl text-black md:text-3xl lg:text-4xl font-bold mb-6 uppercase"
+            className="mb-6 text-3xl font-bold text-black uppercase md:text-3xl lg:text-4xl"
           >
             Base não se compra na véspera. <br />
             Se cultiva.
@@ -260,7 +269,7 @@ export default function Home() {
 
           <motion.p
             variants={item}
-            className="font-open-sans text-xl text-gray-400 leading-relaxed w-full md:w-3xl"
+            className="w-full text-xl leading-relaxed text-gray-400 font-open-sans md:w-3xl"
           >
             Improvisar conteúdo na reta final é o caminho mais caro para perder
             uma eleição. Investir na base tarde demais, pulverizar orçamento
@@ -271,7 +280,7 @@ export default function Home() {
 
           <motion.p
             variants={item}
-            className="text-xl text-black py-6 md:text-2xl font-bold mb-6"
+            className="py-6 mb-6 text-xl font-bold text-black md:text-2xl"
           >
             Quem começa antes, tem mais chances de garantir o resultado.
           </motion.p>
@@ -292,12 +301,12 @@ export default function Home() {
 
       {/* Conteúdo */}
       <section ref={textRef} className="overflow-hidden">
-        <div className="flex justify-center items-center py-24 px-6 overflow-hidden">
-          <h2 className="font-poppins text-5xl sm:text-5xl lg:md:text-8xl xl:text-9xl font-bold leading-tight text-center">
+        <div className="flex items-center justify-center px-6 py-24 overflow-hidden">
+          <h2 className="text-5xl font-bold leading-tight text-center font-poppins sm:text-5xl lg:md:text-8xl xl:text-9xl">
             <motion.span className="block leading-[1.2] md:leading-tight">
               <motion.span
                 style={{ y: textY, opacity: textOpacity }}
-                className="block block will-change-transform "
+                className="block will-change-transform "
               >
                 tudo o que é necessário
               </motion.span>
@@ -306,7 +315,7 @@ export default function Home() {
             <span className="block overflow-hidden">
               <motion.span
                 style={{ y: textY, opacity: textOpacity }}
-                className="block block will-change-transform"
+                className="block will-change-transform"
               >
                 e nada a mais.
               </motion.span>
@@ -318,17 +327,17 @@ export default function Home() {
       <hr className="border-gray-100my-6 mx-[5%]" />
       <section
         ref={ref}
-        className="bg-black text-white px-6 py-45 overflow-hidden"
+        className="px-6 overflow-hidden text-white bg-black py-45"
       >
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-500 uppercase tracking-widest text-2xl mb-10">
+          <p className="mb-10 text-2xl tracking-widest text-gray-500 uppercase">
             onde você vai chegar
           </p>
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid gap-8 md:grid-cols-5">
             {stats.map((item, i) => (
               <div key={i}>
-                <h3 className="font-poppins text-4xl md:text-6xl font-light">
+                <h3 className="text-4xl font-light font-poppins md:text-6xl">
                   {inView ? (
                     <CountUp
                       start={0}
@@ -342,7 +351,7 @@ export default function Home() {
                   {item.suffix}
                 </h3>
 
-                <p className="text-gray-500 mt-2 text-md">{item.label}</p>
+                <p className="mt-2 text-gray-500 text-md">{item.label}</p>
               </div>
             ))}
           </div>
@@ -360,23 +369,33 @@ export default function Home() {
         >
           <motion.h3
             variants={item}
-            className="font-poppins text-5xl text-black md:text-8xl font-bold mb-6"
+            className="mb-6 text-5xl font-bold text-black font-poppins md:text-7xl"
           >
-            soluções <br /> estratégicas
+            {/* soluções <br /> estratégicas */}
+            Estrutura de comunicação digital <br />
+            para quem atua na política.
           </motion.h3>
 
           <motion.div
             variants={item}
-            className="font-open-sans text-lg text-gray-400 max-w-xl leading-relaxed md:w-2xl"
+            className="max-w-xl text-lg leading-relaxed text-gray-400 font-open-sans md:w-2xl"
           >
             <p className="mb-3">
               Eles aparecem na campanha. Nós aparecemos sempre.
             </p>
             <p className="mb-3">
-              A diferença está no que ninguém vê. No posicionamento construído
+              {/* A diferença está no que ninguém vê. No posicionamento construído
               em silêncio, na narrativa estruturada, na presença que o eleitor
               sente sem saber explicar. Quando a largada é dada, o trabalho
-              feito antes já decidiu quem vence.
+              feito antes já decidiu quem vence. */}
+              <ul>
+                <li><b>produção de conteúdo</b></li>
+                <li><b>gravação</b></li>
+                <li><b>edição</b></li> 
+                <li><b>tráfego pago</b></li>
+                <li><b>sites e landing pages</b></li>
+                <li><b>estratégia para redes sociais</b></li>
+              </ul>
             </p>
             <p className="mb-3">
               Não entregamos conteúdo. Construímos presença. Cada peça pensada,
@@ -411,21 +430,21 @@ export default function Home() {
           <div className="max-w-5xl px-2 md:px-0 pt-30">
             <motion.h3
               variants={item}
-              className="text-3xl text-black md:text-5xl font-bold mb-6"
+              className="mb-6 text-3xl font-bold text-black md:text-5xl"
             >
               PAVEAR
             </motion.h3>
 
             <motion.p
               variants={item}
-              className="font-open-sans text-xl text-gray-400 max-w-full leading-relaxed"
+              className="max-w-full text-xl leading-relaxed text-gray-400 font-open-sans"
             >
               v. exibir-se, mostrar-se.
             </motion.p>
 
             <motion.p
               variants={item}
-              className="text-lg text-black md:text-x mt-6"
+              className="mt-6 text-lg text-black md:text-x"
             >
               Quem paveia não se exibe à toa. Está construindo para ser visto.
             </motion.p>
@@ -436,7 +455,7 @@ export default function Home() {
       {/* FAZEMOS */}
       <section className="bg-white text-black px-6 pb-16 md:px-[15%] overflow-hidden">
         <motion.div
-          className="max-w-5xl mx-auto px-2 md:px-0"
+          className="max-w-5xl px-2 mx-auto md:px-0"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -450,9 +469,9 @@ export default function Home() {
                 initial="hidden"
                 animate="visible"
                 onClick={() => setActive(active === i ? null : i)}
-                className="border-b pb-2 cursor-pointer text-right"
+                className="pb-2 text-right border-b cursor-pointer"
               >
-                <div className="flex flex-row-reverse justify-between items-center text-2xl">
+                <div className="flex flex-row-reverse items-center justify-between text-2xl">
                   <p>
                     <span className="font-bold">{item.title.charAt(0)}</span>
                     {item.title.slice(1)}
@@ -473,7 +492,7 @@ export default function Home() {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="text-gray-500 text-lg text-right">
+                  <p className="text-lg text-right text-gray-500">
                     {item.desc}
                   </p>
                 </div>
@@ -496,10 +515,10 @@ export default function Home() {
       </section>
 
       {/* MARCAS */}
-      {/* <section className="bg-black px-6 py-16 text-center">
-        <h3 className="text-3xl md:text-5xl font-bold mb-10">marcas</h3>
+      {/* <section className="px-6 py-16 text-center bg-black">
+        <h3 className="mb-10 text-3xl font-bold md:text-5xl">marcas</h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-gray-400 text-sm">
+        <div className="grid grid-cols-2 gap-6 text-sm text-gray-400 md:grid-cols-4">
           {[
             "Uber",
             "3M",
@@ -525,7 +544,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.h3
-            className="font-poppins text-5xl sm:text-6xl md:text-8xl text-white font-bold break-words"
+            className="text-5xl font-bold text-white break-words font-poppins sm:text-6xl md:text-8xl"
             variants={item}
           >
             criação <br /> eleitoral
@@ -533,7 +552,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-16 pb-40 px-6 md:px-30"
+          className="flex flex-col gap-16 px-6 pb-40 md:px-30"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -550,10 +569,10 @@ export default function Home() {
             >
               <div className="text-4xl font-bold">{i + 1}.</div>
               <div>
-                <h4 className="font-bold uppercase mb-2 text-2xl">
+                <h4 className="mb-2 text-2xl font-bold uppercase">
                   {step.title}
                 </h4>
-                <p className="font-poppins text-gray-400 text-sm">
+                <p className="text-sm text-gray-400 font-poppins">
                   {step.desc}
                 </p>
               </div>
@@ -563,21 +582,21 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-black px-6 text-sm border-t">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 text-center md:text-left justify-around">
+      <footer className="px-6 text-sm bg-black border-t">
+        <div className="flex flex-col items-center justify-around max-w-6xl gap-12 mx-auto text-center md:flex-row md:items-start md:text-left">
           {/* BLOCO 1 */}
-          <div className="py-16 max-w-md">
+          <div className="max-w-md py-16">
             <p className="text-3xl font-bold">
               Nós vamos de candidatos a eleitos, <br />e de eleitos aos que
               querem se reeleger.
             </p>
 
-            <p className="text-lg text-gray-500 mt-4">
+            <p className="mt-4 text-lg text-gray-500">
               Combinamos o que elegeu cada um deles para que a próxima vez seja
               a sua.
             </p>
 
-            <div className="text-gray-400 mt-6">
+            <div className="mt-6 text-gray-400">
               <p>© 2025</p>
               <p>Todos os direitos reservados</p>
             </div>
@@ -585,15 +604,15 @@ export default function Home() {
 
           {/* BLOCO 2 */}
           <div className="py-16">
-            <h4 className="text-3xl font-bold mb-2">Contato</h4>
+            <h4 className="mb-2 text-3xl font-bold">Contato</h4>
             <p className="text-lg text-gray-500">rjveiga.marketing@gmail.com</p>
             <p className="text-lg text-gray-500">(11) 91518-1487</p>
           </div>
 
           {/* BLOCO 3 */}
           <div className="py-16">
-            <h4 className="text-3xl font-bold mb-2">Social</h4>
-            <div className="text-lg text-gray-400 flex flex-col underline gap-4">
+            <h4 className="mb-2 text-3xl font-bold">Social</h4>
+            <div className="flex flex-col gap-4 text-lg text-gray-400 underline">
               <a
                 className="cursor-pointer"
                 target="_blank"
